@@ -19,6 +19,11 @@ void setup() {
   in = new AudioIn(this, 0);
   in.start();
   amp.input(in);
+  
+  tower  = loadImage("tower.png");
+  house1 = loadImage("house1.png");
+  house2 = loadImage("house2.png");
+  palace = loadImage("palace.png");
 }
 
 void draw() {
@@ -31,6 +36,9 @@ void draw() {
   if (b) {
     bird();
   }
+  if (c) {
+    streetview();
+  }
 }
 
 void keyPressed() {
@@ -42,5 +50,8 @@ void keyPressed() {
   }
   if (key == 'b') {
     b = !b;
+  }
+  if (key == 'c') {
+    c = !c;
   }
 }
